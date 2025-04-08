@@ -1,0 +1,192 @@
+@mixin marge($left, $right) {
+	margin-left: $left;
+	margin-right: $right;
+}
+@mixin imageArticle($disp, $gap, $radius) {
+	display: $disp;
+	gap: $gap;
+	border-radius: $radius;
+}
+.publierArticle {
+	border: solid 1px;
+	padding: 1rem;
+}
+.avantarticle {
+	@include marge(2rem, 2rem);
+	display: flex;
+	justify-content: space-between;
+}
+.contentArticle {
+	@include marge(2rem, 2rem);
+	display: flex;
+	gap: 1rem;
+	&_Dashboard {
+		flex-basis: 20rem;
+		// background: rgb(223, 26, 26);
+	}
+	&_droite {
+		flex: 1;
+	}
+}
+.article_tete_haut {
+	// @include imageArticle(flex, 1rem, 15px);
+	// display: flex;
+	// justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: repeat(3, 18rem);
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.pageArticle_image {
+	background: #fff;
+	border: solid 1px;
+	border-radius: 5px;
+	border-color: #e8e3e3;
+}
+.postPar {
+	padding-top: 1rem;
+}
+.react {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include marge(0.5rem, 0.5rem);
+}
+.typereaction {
+	border-radius: 15px;
+	color: #fff;
+	background: rgb(206, 43, 43);
+	padding: 0.2rem;
+}
+.presentationArticle {
+	border-radius: 15px;
+	@include marge(0.5rem, 0.5rem);
+	margin-top: 2rem;
+	width: 90%;
+	height: 45%;
+	object-fit: fill;
+}
+.chercher,
+.btn_chercher {
+	padding: 0.5rem;
+}
+.chercher {
+	width: 10rem;
+}
+.btn_chercher {
+	width: 6rem;
+}
+.research {
+	padding-bottom: 1.5rem;
+}
+.techno {
+	display: flex;
+	justify-content: space-between;
+	@include marge(0.5rem, 0.5rem);
+}
+.listeCategorie {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+// newform
+.newform {
+	margin-left: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 900px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #fff;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 2rem;
+}
+
+.image {
+	position: relative;
+	width: 100%;
+	height: 200px; /* Image taille augmentée */
+}
+
+.imadedechaquehotel {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.promotion {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+
+.hotel-info {
+	padding: 0.5rem 1rem; /* Réduction du padding */
+	text-align: center;
+}
+
+.nomHotel h3 {
+	font-size: 1.6rem;
+	margin: 0.1rem 0;
+}
+
+.etoile span {
+	font-size: 1.2rem;
+	color: #f39c12;
+	margin-bottom: 0.25rem; /* Moins d'espace sous la classe étoile */
+}
+
+.descriptionHotel p {
+	margin: 0.2rem 0; /* Réduction de la marge pour les descriptions */
+	font-size: 1rem;
+	line-height: 1.3;
+	color: #555;
+}
+
+.loisir {
+	// margin-top: 0.5rem;
+	// padding: 0.5rem;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	font-size: 1rem;
+	color: #333;
+	text-align: center;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin-top: 1rem;
+	padding: 0 1rem;
+}
+
+.btnreserv {
+	// padding: 0.5rem 1.2rem;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #2980b9;
+}
+.button-link {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+}

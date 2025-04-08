@@ -1,0 +1,520 @@
+@mixin parameter($align, $size, $color) {
+	text-align: $align;
+	font-size: $size;
+	color: $color;
+}
+
+/* Welcome Section Styles */
+.bienvenue {
+	background: rgb(45, 45, 114);
+	padding: 2rem 1rem;
+	position: relative;
+	text-align: center;
+}
+
+.trouverICI {
+	@include parameter(center, 3rem, #fff);
+	font-weight: bold;
+	z-index: 10;
+}
+
+.offres {
+	@include parameter(center, 1.5rem, #fff);
+	padding-bottom: 2rem;
+	z-index: 10;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Slider Styles */
+.slider-container {
+	position: relative;
+	margin-top: -5rem;
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.slider {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.slide {
+	min-width: 100%;
+	transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+	position: absolute;
+	top: 20%;
+	transform: translateY(-20%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	font-size: 24px;
+	padding: 5px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.prev {
+	left: 10px;
+	width: 8%;
+}
+
+.next {
+	right: 10px;
+	width: 8%;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Search Section Styles */
+.searchallthings {
+	display: flex;
+	gap: 1rem;
+	padding: 2rem;
+	margin-left: 5rem;
+	justify-content: center;
+	position: absolute;
+	top: 48%;
+}
+
+.inptxt {
+	padding: 1rem;
+	width: 17rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.btnsearch {
+	width: 10rem;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.btnsearch:hover {
+	background-color: #45a049;
+}
+.popu {
+	font-size: 2rem;
+	font-weight: bold;
+}
+/* Main Content Styles */
+.contentAccueil {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.griderContent {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 éléments par ligne */
+	gap: 1rem;
+	width: 100%;
+}
+
+.griddroite {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.griddroite:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imgcontent {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.detailImg {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	position: relative;
+}
+
+.hote {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.localHotel {
+	font-size: 1rem;
+	color: #333;
+	margin: 0.5rem 0;
+}
+
+.reduction {
+	background-color: #e5f9e5;
+	color: green;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+
+.tarifs {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.fa-heart {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1.8rem;
+	color: red;
+	cursor: pointer;
+}
+
+.hote {
+	font-weight: bold;
+	font-size: 1.2rem;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.localHotel {
+	font-size: 1rem;
+	color: #333;
+	margin: 0.5rem 0;
+	display: block;
+}
+
+.etoile {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.menuoffrir {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.reduction {
+	display: inline-block;
+	margin-right: 1rem;
+	background-color: #e5f9e5;
+	color: green;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+.detailsplus {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transform: translateY(50%);
+}
+.plusdetails {
+	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+	padding: 0.5rem 1rem;
+}
+
+.remarque.email {
+	color: blue;
+}
+.fa-heart {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1.8rem;
+	color: red;
+	cursor: pointer;
+}
+
+.tarifs {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+/* Nouveau conteneur pour explorer */
+.explore-container {
+	display: flex;
+	justify-content: space-between; /* Pour espacer les deux blocs de manière égale */
+	gap: 2rem; /* Espacement entre les blocs */
+	margin: 3rem 0; /* Marges pour l'espacement vertical */
+	padding: 2rem;
+}
+
+/* Bloc avec l'image */
+.explore-block {
+	flex: 1; /* Prendre une largeur égale à celle du texte */
+	overflow: hidden;
+	border-radius: 10px; /* Arrondir les coins de l'image */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* L'image remplit tout l'espace sans déformer */
+	border-radius: 10px;
+}
+
+/* Bloc avec le texte */
+.explore-block-text {
+	flex: 1; /* Prendre une largeur égale à celle de l'image */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Centrer le texte verticalement */
+	align-items: center; /* Centrer le texte horizontalement */
+	text-align: center; /* Centrer le texte à l'intérieur du bloc */
+	padding: 1.5rem;
+	background-color: #f8f8f8; /* Fond légèrement gris */
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-block-text h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.explore-block-text p {
+	font-size: 1rem;
+	color: #555;
+	margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+	padding: 1rem 2rem;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	display: block;
+	text-decoration: none;
+	width: 100%;
+}
+
+.explore-btn:hover {
+	background-color: #333; /* Légère variation de couleur au survol */
+}
+
+/* Conteneur principal */
+.popular-hotels {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+	gap: 2rem; /* Espacement entre les éléments */
+	padding: 3rem;
+	margin-top: 3rem;
+}
+
+/* Style pour chaque hôtel */
+.popular-hotel {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column; /* Image en haut, texte en bas */
+}
+
+.hotel-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover; /* L'image couvre la totalité de l'espace sans déformer */
+	border-bottom: 5px solid #f0f0f0; /* Légère séparation entre l'image et le texte */
+}
+
+.hotel-info {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-align: center;
+}
+
+.hotel-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+}
+
+.hotel-location {
+	font-size: 1rem;
+	color: #666;
+}
+
+.ratings {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+.avisetcomment {
+	display: flex;
+	// justify-content: space-between;
+	align-items: center;
+	gap: 0.7rem;
+	margin-bottom: 1rem;
+}
+
+.likes,
+.comments {
+	font-size: 1rem;
+	color: #333;
+}
+
+.details-link {
+	background-color: #000;
+	color: #fff;
+	padding: 0.8rem 1.5rem;
+	text-decoration: none;
+	border-radius: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 1.5rem;
+	transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+	background-color: #444; /* Couleur plus sombre au survol */
+}
+.typewriter {
+	font-family: "Courier New", monospace;
+	font-size: 30px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+	border-right: 4px solid black;
+	animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 50ch;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+
+// responsive small
+@media (max-width: 768px) {
+	.griderContent {
+		grid-template-columns: 1fr 1fr; /* 2 elements per row */
+	}
+
+	.searchallthings {
+		flex-direction: column;
+		gap: 1rem;
+		margin-left: 0;
+	}
+
+	.bienvenue {
+		padding: 1rem;
+	}
+
+	.trouverICI {
+		font-size: 2.5rem;
+	}
+
+	.offres {
+		font-size: 1.3rem;
+	}
+
+	.slider-container {
+		max-width: 100%;
+	}
+
+	.imgcontent {
+		height: 150px;
+	}
+
+	.explore-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.explore-block-text {
+		width: 100%;
+		text-align: center;
+	}
+
+	.explore-btn {
+		width: 100%;
+	}
+
+	.popular-hotels {
+		grid-template-columns: 1fr; /* 1 element per row */
+	}
+}
+
+// responsive 480
+@media (max-width: 480px) {
+	.griderContent {
+		grid-template-columns: 1fr; /* 1 element per row */
+	}
+
+	.btnsearch {
+		width: 100%;
+	}
+
+	.explore-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.explore-btn {
+		font-size: 1.1rem;
+		padding: 1rem 1.5rem;
+	}
+
+	.details-link {
+		font-size: 1rem;
+		padding: 0.8rem 1rem;
+	}
+}

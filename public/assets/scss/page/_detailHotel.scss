@@ -1,0 +1,290 @@
+/* Container principal */
+.content-wrapper {
+	display: flex;
+	flex-direction: column; /* Empile les sections en colonne (Commentaires en bas) */
+	gap: 20px; /* Espacement entre les sections */
+	width: 100%;
+	max-width: 1200px; /* Limite la largeur du conteneur global */
+	margin: 0 auto; /* Centrage du contenu */
+}
+
+/* Conteneur de contenu principal */
+.main-content {
+	display: flex; /* Utilise Flexbox pour mettre les éléments côte à côte */
+	justify-content: space-between; /* Distribution de l'espace entre les deux sections */
+	gap: 20px; /* Espacement entre la description et la galerie */
+	width: 100%;
+	flex-wrap: wrap; /* Permet au contenu de se réorganiser en colonnes si l'espace est insuffisant */
+}
+
+/* Section des détails (à gauche) */
+.containerDetail {
+	flex: 1; /* Prend une largeur flexible */
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* Image principale */
+// .left {
+// 	flex: 1;
+// 	display: flex;
+// 	flex-direction: column;
+// }
+
+.main-image {
+	width: 100%;
+	height: auto;
+	max-width: 600px; /* Limite la taille de l'image à une largeur raisonnable */
+	border-radius: 8px;
+	object-fit: cover; /* Assure que l'image s'adapte bien */
+}
+
+/* Description sous l'image */
+.description {
+	margin-top: 10px;
+}
+
+.price {
+	font-weight: bold;
+	color: #5cb85c;
+}
+
+/* Section des images (swiper) à droite */
+.hotel-details {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px; /* Espacement entre la galerie d'images et autres éléments */
+}
+
+/* Styles pour le swiper */
+.swiper.mySwiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	text-align: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Section des commentaires en bas */
+.comments-section {
+	margin-top: 30px;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque commentaire */
+.comment {
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+/* Formulaire de commentaire */
+.comment-form {
+	margin-top: 20px;
+}
+
+.comment-form textarea {
+	width: 100%;
+	height: 60px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.comment-form button {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.comment-form button:hover {
+	background-color: #4cae4c;
+}
+
+// nouveau style de mes liens
+.left {
+	display: flex;
+	flex-direction: row; // Aligner les éléments horizontalement
+	padding: 20px;
+	background-color: #f9f9f9; // Couleur de fond de la section principale
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.image-container {
+		flex: 3; // L'image prend 3 parties de l'espace, plus grande que la description
+		margin-right: 20px; // Espacement entre l'image et la description
+
+		.main-image {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+	}
+
+	.description {
+		flex: 2; // La description prend moins d'espace
+		background-color: #3498db; // Fond bleu pour la description
+		color: white; // Texte en blanc pour contraster avec le fond bleu
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		h2 {
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+
+		.pdes {
+			font-size: 1rem;
+			color: #f2f2f2; // Texte un peu plus clair pour la description
+			// margin-bottom: 2x;
+		}
+
+		.price {
+			font-size: 1.2rem;
+			color: #e67e22;
+			font-weight: bold;
+		}
+
+		.contact-info {
+			margin-top: 20px;
+
+			p.contact {
+				font-size: 1rem;
+				color: #f2f2f2;
+				font-weight: bold;
+
+				span {
+					font-weight: normal;
+					color: #f2f2f2;
+				}
+			}
+		}
+
+		.reservation-btn {
+			display: inline-block;
+			padding: 8px 18px; // Réduire la taille du bouton
+			background-color: #e67e22;
+			color: white;
+			font-size: 1rem; // Réduire la taille du texte
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 30px;
+			transition: background-color 0.3s ease, transform 0.3s ease;
+			margin-top: 20px;
+
+			&:hover {
+				background-color: #d45d1e;
+				transform: scale(1.05);
+			}
+
+			&:active {
+				transform: scale(1);
+			}
+		}
+	}
+}
+// style du texte de description
+// Base Styles
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$accent-color: #ff6f61;
+$font-family: "Arial", sans-serif;
+$line-height: 1.6;
+$max-width: 900px;
+
+// Font Size Adjustments
+$font-size-default: 18px;
+$font-size-large: 20px;
+
+// Spacing
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+
+// Modern Design for Description
+.explication {
+	background-color: $secondary-color;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin: $spacing-medium auto;
+	padding: $spacing-medium;
+	max-width: $max-width;
+	font-family: $font-family;
+
+	.explication__text {
+		color: $primary-color;
+		font-size: $font-size-default;
+		line-height: $line-height;
+		text-align: justify;
+		margin-bottom: $spacing-medium;
+
+		// Add subtle text decoration to make it stand out
+		position: relative;
+		padding-left: 20px;
+
+		&::before {
+			content: "\f0f6";
+			font-family: "FontAwesome";
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 1.5em;
+			color: $accent-color;
+		}
+
+		// Responsive Font Size
+		@media (min-width: 768px) {
+			font-size: $font-size-large;
+		}
+
+		// Adding some line spacing and font size variation for readability
+		& + & {
+			margin-top: $spacing-large;
+		}
+	}
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+	.explication {
+		padding: $spacing-small;
+	}
+
+	.explication__text {
+		font-size: $font-size-default;
+	}
+}

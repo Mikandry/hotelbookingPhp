@@ -1,0 +1,1806 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Welcome Section Styles */
+.bienvenue {
+  background: rgb(45, 45, 114);
+  padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.trouverICI {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.offres {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-bottom: 2rem;
+  z-index: 10;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Slider Styles */
+.slider-container {
+  position: relative;
+  margin-top: -5rem;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-20%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+  width: 8%;
+}
+
+.next {
+  right: 10px;
+  width: 8%;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Search Section Styles */
+.searchallthings {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  margin-left: 5rem;
+  justify-content: center;
+  position: absolute;
+  top: 48%;
+}
+
+.inptxt {
+  padding: 1rem;
+  width: 17rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btnsearch {
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btnsearch:hover {
+  background-color: #45a049;
+}
+
+.popu {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Main Content Styles */
+.contentAccueil {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.griderContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 éléments par ligne */
+  gap: 1rem;
+  width: 100%;
+}
+
+.griddroite {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.griddroite:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imgcontent {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detailImg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+}
+
+.hote {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.localHotel {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.reduction {
+  background-color: #e5f9e5;
+  color: green;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.tarifs {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.8rem;
+  color: red;
+  cursor: pointer;
+}
+
+.hote {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.localHotel {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+.etoile {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.menuoffrir {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reduction {
+  display: inline-block;
+  margin-right: 1rem;
+  background-color: #e5f9e5;
+  color: green;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.detailsplus {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.plusdetails {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+}
+
+.remarque.email {
+  color: blue;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.8rem;
+  color: red;
+  cursor: pointer;
+}
+
+.tarifs {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Nouveau conteneur pour explorer */
+.explore-container {
+  display: flex;
+  justify-content: space-between; /* Pour espacer les deux blocs de manière égale */
+  gap: 2rem; /* Espacement entre les blocs */
+  margin: 3rem 0; /* Marges pour l'espacement vertical */
+  padding: 2rem;
+}
+
+/* Bloc avec l'image */
+.explore-block {
+  flex: 1; /* Prendre une largeur égale à celle du texte */
+  overflow: hidden;
+  border-radius: 10px; /* Arrondir les coins de l'image */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image remplit tout l'espace sans déformer */
+  border-radius: 10px;
+}
+
+/* Bloc avec le texte */
+.explore-block-text {
+  flex: 1; /* Prendre une largeur égale à celle de l'image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrer le texte verticalement */
+  align-items: center; /* Centrer le texte horizontalement */
+  text-align: center; /* Centrer le texte à l'intérieur du bloc */
+  padding: 1.5rem;
+  background-color: #f8f8f8; /* Fond légèrement gris */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-block-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.explore-block-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.explore-btn:hover {
+  background-color: #333; /* Légère variation de couleur au survol */
+}
+
+/* Conteneur principal */
+.popular-hotels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  gap: 2rem; /* Espacement entre les éléments */
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+/* Style pour chaque hôtel */
+.popular-hotel {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Image en haut, texte en bas */
+}
+
+.hotel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* L'image couvre la totalité de l'espace sans déformer */
+  border-bottom: 5px solid #f0f0f0; /* Légère séparation entre l'image et le texte */
+}
+
+.hotel-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.hotel-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotel-location {
+  font-size: 1rem;
+  color: #666;
+}
+
+.ratings {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.avisetcomment {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.likes,
+.comments {
+  font-size: 1rem;
+  color: #333;
+}
+
+.details-link {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+  background-color: #444; /* Couleur plus sombre au survol */
+}
+
+.typewriter {
+  font-family: "Courier New", monospace;
+  font-size: 30px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 4px solid black;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .griderContent {
+    grid-template-columns: 1fr 1fr; /* 2 elements per row */
+  }
+  .searchallthings {
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 0;
+  }
+  .bienvenue {
+    padding: 1rem;
+  }
+  .trouverICI {
+    font-size: 2.5rem;
+  }
+  .offres {
+    font-size: 1.3rem;
+  }
+  .slider-container {
+    max-width: 100%;
+  }
+  .imgcontent {
+    height: 150px;
+  }
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .explore-block-text {
+    width: 100%;
+    text-align: center;
+  }
+  .explore-btn {
+    width: 100%;
+  }
+  .popular-hotels {
+    grid-template-columns: 1fr; /* 1 element per row */
+  }
+}
+@media (max-width: 480px) {
+  .griderContent {
+    grid-template-columns: 1fr; /* 1 element per row */
+  }
+  .btnsearch {
+    width: 100%;
+  }
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .explore-btn {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+  .details-link {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+:root {
+  --primary: #4a90e2;
+}
+
+header {
+  padding: 1.2rem;
+  color: #fff;
+  background: #4a90e2;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.moyendetransport {
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  margin-left: 10rem;
+}
+
+.rightsetting {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+}
+.rightsetting_boutton {
+  display: flex;
+  gap: 1rem;
+}
+
+.transp {
+  border-radius: 15px;
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.footer {
+  background: #4a90e2;
+  color: white;
+  padding: 1rem;
+  display: flex;
+}
+
+.footer_left {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+  flex-basis: 40rem;
+}
+.footer_left_about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-basis: 26rem;
+}
+.footer_left_about_comment {
+  justify-content: end;
+}
+.footer_left_company {
+  flex-basis: 7rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+.footer_left_company_about_us {
+  display: block;
+  padding: 0.3rem;
+  color: white;
+}
+.footer_left_creative {
+  flex-basis: 7rem;
+  padding-top: 1rem;
+}
+
+.footer_right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+.footer_right .footer_right_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer_right .footer_right_item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer_right .footer_right_item .footer_right_img1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer_right .footer_right_item .footer_right_img1 .footer_right_img1_itself {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_right .footer_right_item .footer_right_img1 .footer_right_img1_itself_image {
+  max-width: 100px;
+  height: auto;
+}
+.footer_right .footer_right_item .footer_right_img1 .footer_right_img1_comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer_right .footer_right_item .footer_right_img1 .footer_right_img1_comment_h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.footer_right .footer_right_item .footer_right_img1 .footer_right_img1_comment span {
+  font-size: 1rem;
+  color: #555;
+}
+.footer_right .footer_right_item:first-child {
+  flex-direction: column-reverse;
+}
+
+.social_icon1 {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.footcopy {
+  color: white;
+}
+
+.header_option {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: 1s;
+  padding-top: 0.1rem;
+}
+.header_option_content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background: rgb(202, 200, 200);
+  color: black;
+  font-size: 1.5rem;
+  transition: 1s;
+}
+
+.header_option:hover .header_option_content {
+  display: block;
+  color: black;
+  background: #4a90e2;
+}
+
+@media (max-width: 1024px) {
+  .moyendetransport {
+    margin-left: 0;
+    justify-content: space-around;
+  }
+  .rightsetting {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .footer_left,
+  .footer_right {
+    flex-basis: 100%;
+    margin: 1rem 0;
+  }
+  .footer_right_item {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+  .transp {
+    font-size: 1rem; /* Smaller font size for links */
+    padding: 0.8rem;
+  }
+  .footer_right_img1_itself_image {
+    max-width: 80%; /* Resize images to fit smaller screens */
+  }
+  .footer_right_item:first-child {
+    flex-direction: column-reverse; /* Ensure items are stacked properly */
+  }
+}
+/* For Mobile Devices (Portrait) */
+@media (max-width: 768px) {
+  .transp {
+    width: 100%; /* Ensure transport items take up full width */
+    text-align: center;
+  }
+  .rightsetting {
+    flex-direction: column;
+    align-items: center;
+  }
+  .moyendetransport {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .footer_left,
+  .footer_right {
+    flex-basis: 100%;
+    margin: 1rem 0;
+  }
+  .footer_right_item {
+    flex-direction: column; /* Stack items vertically */
+  }
+  .footer_right_img1_itself_image {
+    max-width: 80%;
+  }
+  .header_option_content {
+    font-size: 1.3rem; /* Smaller font size for menu items */
+  }
+}
+/* For Very Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  .transp {
+    font-size: 0.9rem; /* Even smaller font for mobile */
+    padding: 0.6rem;
+  }
+  .footer_left,
+  .footer_right {
+    flex-basis: 100%;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .footer_right_item {
+    flex-direction: column; /* Ensure proper stacking */
+  }
+  .header_option_content {
+    font-size: 1.2rem; /* Adjust dropdown menu size */
+  }
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  margin-left: 30rem;
+}
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #4a90e2;
+}
+
+.form-container .input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.form-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-container .entrer {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+.form-container .btnLog {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-container .signup {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.form-container .signup a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+.form-container .signup a:hover {
+  text-decoration: underline;
+}
+
+.containerInscription {
+  width: 300px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-groupInscription {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.inptinscrip {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+/* Style principal du formulaire */
+.containerReservation {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Formulaire et champs */
+.form-groupReservation {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.inptreservation {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inptreservation:focus {
+  border-color: #5cb85c;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Tableau de sélection de chambre */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+td:first-child {
+  background-color: #e7f7f7;
+}
+
+/* Bouton de réservation */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cae4c;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Radio buttons */
+input[type=radio]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+input[type=radio] {
+  width: 20px;
+  height: 20px;
+}
+
+/* Amélioration de la disposition et du responsive */
+@media (max-width: 768px) {
+  .containerReservation {
+    padding: 20px;
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .inptreservation,
+  button {
+    font-size: 1rem;
+  }
+}
+.containerProfile {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: nowrap;
+  background-color: #f4f4f4;
+}
+
+.left-menu {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.left-menu ul li {
+  margin: 10px 0;
+}
+.left-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+.left-menu ul li a:hover {
+  background-color: #34495e;
+}
+
+.right-contentProfile {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  overflow-y: auto;
+}
+.right-contentProfile .containerProfile {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.right-contentProfile h1 {
+  text-align: center;
+  color: #333;
+}
+.right-contentProfile .form-groupProfile {
+  margin-bottom: 15px;
+}
+.right-contentProfile label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.right-contentProfile .inptmodifArticle {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.right-contentProfile textarea {
+  height: 100px;
+}
+.right-contentProfile button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.right-contentProfile button:hover {
+  background-color: #4cae4c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table td {
+  font-size: 14px;
+}
+
+/* Color for 'Date de départ' */
+table td:nth-child(5) {
+  background-color: #ffeb3b;
+  font-weight: bold;
+}
+
+/* Action icons and buttons */
+.fas {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fas:hover {
+  color: #4caf50;
+}
+
+.action-btns input[type=checkbox] {
+  cursor: pointer;
+}
+
+.adddarticle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.containerProfile {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.containernewArticle {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-groupProfile {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.inptnewarticle {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  width: 40%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.back-button {
+  width: 40%;
+  padding: 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-button:hover {
+  background-color: #c9302c;
+}
+
+/* Section à droite avec l'image ou l'espace vide */
+.side-sectionProfile {
+  max-width: 400px;
+  flex-grow: 1;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.desc {
+  font-size: 2rem;
+}
+
+/* Container principal */
+.content-wrapper {
+  display: flex;
+  flex-direction: column; /* Empile les sections en colonne (Commentaires en bas) */
+  gap: 20px; /* Espacement entre les sections */
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur du conteneur global */
+  margin: 0 auto; /* Centrage du contenu */
+}
+
+/* Conteneur de contenu principal */
+.main-content {
+  display: flex; /* Utilise Flexbox pour mettre les éléments côte à côte */
+  justify-content: space-between; /* Distribution de l'espace entre les deux sections */
+  gap: 20px; /* Espacement entre la description et la galerie */
+  width: 100%;
+  flex-wrap: wrap; /* Permet au contenu de se réorganiser en colonnes si l'espace est insuffisant */
+}
+
+/* Section des détails (à gauche) */
+.containerDetail {
+  flex: 1; /* Prend une largeur flexible */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Image principale */
+.main-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* Limite la taille de l'image à une largeur raisonnable */
+  border-radius: 8px;
+  object-fit: cover; /* Assure que l'image s'adapte bien */
+}
+
+/* Description sous l'image */
+.description {
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #5cb85c;
+}
+
+/* Section des images (swiper) à droite */
+.hotel-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacement entre la galerie d'images et autres éléments */
+}
+
+/* Styles pour le swiper */
+.swiper.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section des commentaires en bas */
+.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque commentaire */
+.comment {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Formulaire de commentaire */
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #4cae4c;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.left:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.left .image-container {
+  flex: 3;
+  margin-right: 20px;
+}
+.left .image-container .main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.left .description {
+  flex: 2;
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left .description h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.left .description .pdes {
+  font-size: 1rem;
+  color: #f2f2f2;
+}
+.left .description .price {
+  font-size: 1.2rem;
+  color: #e67e22;
+  font-weight: bold;
+}
+.left .description .contact-info {
+  margin-top: 20px;
+}
+.left .description .contact-info p.contact {
+  font-size: 1rem;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+.left .description .contact-info p.contact span {
+  font-weight: normal;
+  color: #f2f2f2;
+}
+.left .description .reservation-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #e67e22;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+.left .description .reservation-btn:hover {
+  background-color: #d45d1e;
+  transform: scale(1.05);
+}
+.left .description .reservation-btn:active {
+  transform: scale(1);
+}
+
+.explication {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  font-family: "Arial", sans-serif;
+}
+.explication .explication__text {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+.explication .explication__text::before {
+  content: "\f0f6";
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5em;
+  color: #ff6f61;
+}
+@media (min-width: 768px) {
+  .explication .explication__text {
+    font-size: 20px;
+  }
+}
+.explication .explication__text + .explication .explication__text {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .explication {
+    padding: 10px;
+  }
+  .explication__text {
+    font-size: 18px;
+  }
+}
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initialement cachée à gauche */
+  height: 100%;
+  transition: left 0.3s ease-in-out; /* Transition pour la barre latérale */
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0; /* Déplacer la barre latérale à gauche quand elle est ouverte */
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e;
+}
+
+.main-content {
+  margin-left: 0; /* Position initiale */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out; /* Transition pour le déplacement du contenu */
+  flex-grow: 1;
+  width: 100%;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: 0;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+.payment-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.payment-form-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.payment-form-wrapper {
+  flex: 1;
+  max-width: 600px;
+}
+
+.payment-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.payment-title {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.payment-subtitle {
+  color: #3498db;
+  margin-top: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-label {
+  font-weight: bold;
+}
+
+.payment-input,
+.payment-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.payment-input:focus,
+.payment-select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.payment-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.publierArticle {
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.avantarticle {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentArticle {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.contentArticle_Dashboard {
+  flex-basis: 20rem;
+}
+.contentArticle_droite {
+  flex: 1;
+}
+
+.article_tete_haut {
+  display: grid;
+  grid-template-columns: repeat(3, 18rem);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pageArticle_image {
+  background: #fff;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #e8e3e3;
+}
+
+.postPar {
+  padding-top: 1rem;
+}
+
+.react {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.typereaction {
+  border-radius: 15px;
+  color: #fff;
+  background: rgb(206, 43, 43);
+  padding: 0.2rem;
+}
+
+.presentationArticle {
+  border-radius: 15px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+  width: 90%;
+  height: 45%;
+  object-fit: fill;
+}
+
+.chercher,
+.btn_chercher {
+  padding: 0.5rem;
+}
+
+.chercher {
+  width: 10rem;
+}
+
+.btn_chercher {
+  width: 6rem;
+}
+
+.research {
+  padding-bottom: 1.5rem;
+}
+
+.techno {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.listeCategorie {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.newform {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Image taille augmentée */
+}
+
+.imadedechaquehotel {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.promotion {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.hotel-info {
+  padding: 0.5rem 1rem; /* Réduction du padding */
+  text-align: center;
+}
+
+.nomHotel h3 {
+  font-size: 1.6rem;
+  margin: 0.1rem 0;
+}
+
+.etoile span {
+  font-size: 1.2rem;
+  color: #f39c12;
+  margin-bottom: 0.25rem; /* Moins d'espace sous la classe étoile */
+}
+
+.descriptionHotel p {
+  margin: 0.2rem 0; /* Réduction de la marge pour les descriptions */
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #555;
+}
+
+.loisir {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.btnreserv {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.button-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

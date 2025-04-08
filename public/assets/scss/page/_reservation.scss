@@ -1,0 +1,126 @@
+/* Style principal du formulaire */
+.containerReservation {
+	max-width: 800px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	font-family: "Arial", sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+	font-size: 1.8rem;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+/* Formulaire et champs */
+.form-groupReservation {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-size: 1.1rem;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+.inptreservation {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+.inptreservation:focus {
+	border-color: #5cb85c;
+	outline: none;
+}
+
+textarea {
+	height: 120px;
+	resize: vertical;
+}
+
+/* Tableau de sélection de chambre */
+table {
+	width: 100%;
+	margin-top: 30px;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+}
+
+tr:hover {
+	background-color: #f0f0f0;
+}
+
+td:first-child {
+	background-color: #e7f7f7;
+}
+
+/* Bouton de réservation */
+button {
+	width: 100%;
+	padding: 12px;
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+	background-color: #4cae4c;
+	transform: scale(1.05);
+}
+
+button:active {
+	transform: scale(1);
+}
+
+/* Radio buttons */
+input[type="radio"]:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+input[type="radio"] {
+	width: 20px;
+	height: 20px;
+}
+
+/* Amélioration de la disposition et du responsive */
+@media (max-width: 768px) {
+	.containerReservation {
+		padding: 20px;
+		max-width: 100%;
+	}
+
+	h1 {
+		font-size: 1.6rem;
+	}
+
+	.inptreservation,
+	button {
+		font-size: 1rem;
+	}
+}

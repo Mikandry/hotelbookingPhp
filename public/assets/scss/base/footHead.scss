@@ -1,0 +1,292 @@
+:root {
+	--primary: #4a90e2;
+}
+
+header {
+	padding: 1.2rem;
+	color: #fff;
+	background: #4a90e2;
+	font-size: 1.5rem;
+}
+.nav {
+	display: flex;
+	justify-content: space-around;
+}
+.moyendetransport {
+	padding-top: 1.2rem;
+	display: flex;
+	gap: 1rem;
+	margin-left: 10rem;
+}
+.rightsetting {
+	display: flex;
+	gap: 2rem;
+	margin-left: 1rem;
+	&_boutton {
+		display: flex;
+		gap: 1rem;
+	}
+}
+.transp {
+	border-radius: 15px;
+	border: solid 1px;
+	padding: 1rem;
+}
+
+// foterrr et pied de page
+
+.footer {
+	background: #4a90e2;
+	color: white;
+	padding: 1rem;
+	display: flex;
+}
+.footer_left {
+	display: flex;
+	gap: 1rem;
+	margin: 2rem;
+	flex-basis: 40rem;
+	&_about {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		flex-basis: 26rem;
+		&_comment {
+			justify-content: end;
+		}
+	}
+	&_company {
+		flex-basis: 7rem;
+		display: block;
+		padding-bottom: 2rem;
+		&_about_us {
+			display: block;
+			padding: 0.3rem;
+			color: white;
+		}
+	}
+	&_creative {
+		flex-basis: 7rem;
+		padding-top: 1rem;
+	}
+}
+
+// .footer_right {
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 1rem;
+// 	margin: 2rem;
+// 	&_img1 {
+// 		display: flex; // Utilise flex pour aligner les éléments en colonne
+// 		flex-direction: column; // Alignement en colonne
+// 		gap: 1rem;
+// 		&_itself {
+// 			display: flex;
+// 			justify-content: center; // Centrer les images horizontalement
+// 			align-items: center;
+// 			&_image {
+// 				max-width: 70%; // Assure que l'image prend tout l'espace disponible sans déborder
+// 				height: 50%;
+// 				object-fit: cover;
+// 				border-radius: 5px;
+// 			}
+// 		}
+// 		&_comment {
+// 			flex-basis: 15rem;
+// 		}
+// 	}
+// }
+.footer_right {
+	display: flex;
+	flex-direction: column; // Laisse les éléments par défaut en colonne
+	gap: 2rem;
+	margin: 2rem;
+
+	.footer_right_title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: 1rem; // Espace entre le titre et les posts
+	}
+
+	.footer_right_item {
+		display: flex;
+		flex-direction: row; // Affiche l'image et le commentaire côte à côte
+		gap: 1rem; // Espacement entre l'image et le commentaire
+
+		.footer_right_img1 {
+			display: flex;
+			flex-direction: row; // Les éléments dans cette section (image et commentaire) s'affichent côte à côte
+			gap: 1rem;
+
+			.footer_right_img1_itself {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.footer_right_img1_itself_image {
+				max-width: 100px; // Limite la taille de l'image
+				height: auto; // Maintient les proportions de l'image
+			}
+
+			.footer_right_img1_comment {
+				display: flex;
+				flex-direction: column; // Les éléments (nom et adresse) s'affichent en colonne
+				justify-content: center;
+			}
+
+			.footer_right_img1_comment_h1 {
+				margin: 0; // Évite les marges par défaut du h1
+				font-size: 1.2rem;
+			}
+
+			.footer_right_img1_comment span {
+				font-size: 1rem;
+				color: #555; // Change la couleur pour que l'adresse soit plus discrète
+			}
+		}
+	}
+
+	.footer_right_item:first-child {
+		// Pour ne pas inverser le premier élément, applique seulement l'inversion sur les autres
+		flex-direction: column-reverse;
+	}
+}
+
+.social_icon1 {
+	font-size: 24px;
+	display: inline-block;
+}
+.footcopy {
+	color: white;
+}
+
+.header_option {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: 1s;
+	padding-top: 0.1rem;
+
+	&_content {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		padding: 10px;
+		background: rgb(202, 200, 200);
+		color: black;
+		font-size: 1.5rem;
+		transition: 1s;
+	}
+}
+.header_option:hover .header_option_content {
+	display: block;
+	color: black;
+	background: #4a90e2;
+}
+
+// responsive
+@media (max-width: 1024px) {
+	.moyendetransport {
+		margin-left: 0;
+		justify-content: space-around;
+	}
+
+	.rightsetting {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav {
+		flex-direction: column;
+	}
+
+	.footer_left,
+	.footer_right {
+		flex-basis: 100%;
+		margin: 1rem 0;
+	}
+
+	.footer_right_item {
+		flex-direction: column; /* Stack items vertically on small screens */
+	}
+
+	.transp {
+		font-size: 1rem; /* Smaller font size for links */
+		padding: 0.8rem;
+	}
+
+	.footer_right_img1_itself_image {
+		max-width: 80%; /* Resize images to fit smaller screens */
+	}
+
+	.footer_right_item:first-child {
+		flex-direction: column-reverse; /* Ensure items are stacked properly */
+	}
+}
+
+/* For Mobile Devices (Portrait) */
+@media (max-width: 768px) {
+	.transp {
+		width: 100%; /* Ensure transport items take up full width */
+		text-align: center;
+	}
+
+	.rightsetting {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.moyendetransport {
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 0;
+	}
+
+	.nav {
+		flex-direction: column;
+	}
+
+	.footer_left,
+	.footer_right {
+		flex-basis: 100%;
+		margin: 1rem 0;
+	}
+
+	.footer_right_item {
+		flex-direction: column; /* Stack items vertically */
+	}
+
+	.footer_right_img1_itself_image {
+		max-width: 80%;
+	}
+
+	.header_option_content {
+		font-size: 1.3rem; /* Smaller font size for menu items */
+	}
+}
+
+/* For Very Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+	.transp {
+		font-size: 0.9rem; /* Even smaller font for mobile */
+		padding: 0.6rem;
+	}
+
+	.footer_left,
+	.footer_right {
+		flex-basis: 100%;
+	}
+
+	.nav {
+		flex-direction: column;
+	}
+
+	.footer_right_item {
+		flex-direction: column; /* Ensure proper stacking */
+	}
+
+	.header_option_content {
+		font-size: 1.2rem; /* Adjust dropdown menu size */
+	}
+}

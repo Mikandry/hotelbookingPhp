@@ -1,0 +1,88 @@
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$border-radius: 5px;
+$padding: 10px;
+// $btn-hover-color: darken($primary-color, 10%);
+$input-border-color: #ccc;
+
+.payment-container {
+	display: flex;
+	flex-direction: row; // Align the form and image horizontally
+	gap: 20px; // Space between the form and the image
+	width: 100%;
+	max-width: 1200px;
+}
+
+.payment-form-container {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.payment-form-wrapper {
+	flex: 1;
+	max-width: 600px;
+}
+
+.payment-image-wrapper {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.payment-image {
+	width: 100%;
+	max-width: 500px; // Adjust size as per your image
+	border-radius: $border-radius;
+}
+
+.payment-title {
+	text-align: center;
+	color: $primary-color;
+	margin-bottom: 20px;
+}
+
+.payment-subtitle {
+	color: $primary-color;
+	margin-top: 20px;
+}
+
+.payment-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.payment-label {
+	font-weight: bold;
+}
+
+.payment-input,
+.payment-select {
+	padding: $padding;
+	border-radius: $border-radius;
+	border: 1px solid $input-border-color;
+	font-size: 1rem;
+}
+
+.payment-input:focus,
+.payment-select:focus {
+	border-color: $primary-color;
+	outline: none;
+}
+
+.payment-button {
+	background-color: $primary-color;
+	color: white;
+	border: none;
+	padding: 15px;
+	border-radius: $border-radius;
+	cursor: pointer;
+	font-size: 1.1rem;
+	transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+	// background-color: $btn-hover-color;
+}
